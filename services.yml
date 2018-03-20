@@ -1,17 +1,71 @@
 - mongodb:
   name: mongodb
-  dir: /Users/lil36/Documents/test_all/mongodb
+  dir: ../mongodb
   host: localhost
   port: 27017
 
 - caas-stub:
   name: caas-stub
-  dir: /Users/lil36/Documents/test_all/tg-mobile-backend
-  host: locahost
+  dir: ../tg-mobile-backend
+  host: localhost
   port: 3400
+
+- cobra-stub:
+  name: cobra-stub
+  dir: ../tg-entitlement-aggregator
+  host: localhost
+  port: 3200
+
+- python-stub:
+  name: python-stub
+  dir: ../tg-payment-aggregator
+  host: localhost
+  port: 3300
+
+- cis-stub:
+  name: cis-stub
+  dir: ../tg-entitlement-aggregator
+  host: localhost
+  port: 8300
+
+- entitlement-aggregator:
+  name: entitlement-aggregator
+  dir: ../tg-entitlement-aggregator
+  host: localhost
+  port: 8150
+
+- payment-aggregator:
+  name: payment-aggregator
+  dir: ../tg-payment-aggregator
+  host: localhost
+  port: 8200
+
+- config-server:
+  name: config-server
+  dir: ../tg-mobile-backend
+  host: localhost
+  port: 8092
+
+- token-service:
+  name: token-service
+  dir: ../platform-service-token
+  host: localhost
+  port: 8600
+
+- session-service:
+  name: session-service
+  dir: ../platform-service-session
+  host: localhost
+  port: 8500
 
 - bff:
   name: BFF
-  dir: /Users/lil36/Documents/test_all/tg-mobile-backend
+  dir: ../tg-mobile-backend
   host: localhost
   port: 8090
+
+- zuul:
+  name: zuul
+  dir: ../tg-mobile-zuul-server
+  host: localhost
+  port: 8158
