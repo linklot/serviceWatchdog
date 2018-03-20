@@ -1,0 +1,17 @@
+- mongodb:
+  name: mongodb
+  dir: /Users/lil36/Documents/test_all/mongodb
+  host: localhost
+  port: 27017
+
+- caas-stub:
+  name: caas-stub
+  dir: /Users/lil36/Documents/test_all/tg-mobile-backend
+  host: locahost
+  port: 3400
+
+- bff:
+  name: BFF
+  dir: /Users/lil36/Documents/test_all/tg-mobile-backend
+  host: localhost
+  port: 8090
