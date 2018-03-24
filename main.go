@@ -95,7 +95,8 @@ func getServiceGitBranch(service Service) string {
 }
 
 func getServiceStatus(service Service) string {
-	_, err := net.DialTimeout("tcp", service.Host+":"+strconv.Itoa(service.Port), time.Second)
+	conn, err := net.DialTimeout("tcp", service.Host+":"+strconv.Itoa(service.Port), time.Second)
+	defer conn.Close()
 	if err != nil {
 		// Service is down
 		return "DOWN"
