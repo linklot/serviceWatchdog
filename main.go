@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-const TimeInterval = 1
+const TimeInterval = 3
 
 type Service struct {
 	Dir           string
@@ -96,12 +96,12 @@ func getServiceGitBranch(service Service) string {
 
 func getServiceStatus(service Service) string {
 	conn, err := net.DialTimeout("tcp", service.Host+":"+strconv.Itoa(service.Port), time.Second)
-	defer conn.Close()
 	if err != nil {
 		// Service is down
 		return "DOWN"
 	}
 
+	conn.Close()
 	return "RUNNING"
 }
 
